@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Rajdhani:wght@300&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding: 25vh 10vw 15vh;
+  -webkit-perspective: 400px;
+          perspective: 400px;
+}
+
+body main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+body main h1 {
+  position: absolute;
+  left: 0px;
+  top: -50px;
+  font: 34px/1 'rajdhani';
+  color: #555;
+}
+
+body main h1::before {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: #111;
+  position: absolute;
+  left: 0px;
+  top: -10px;
+}
+
+body main .btnUp {
+  display: block;
+  width: 61px;
+  height: 50px;
+  position: absolute;
+  left: -70px;
+  bottom: 120px;
+}
+
+body main .btnUp::before, body main .btnUp::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 20px;
+  background: #777;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+  -webkit-transition: 0.5s 0.2s;
+  transition: 0.5s 0.2s;
+}
+
+body main .btnUp::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+body main .btnUp::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+body main .btnUp span {
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: #777;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body main .btnUp p {
+  font: 12px/1 'orbitron';
+  color: #111;
+  text-align: center;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+  -webkit-transition: 0.5s 0.4s;
+  transition: 0.5s 0.4s;
+}
+
+body main .btnUp:hover::before {
+  -webkit-transform: rotate(45deg) translateY(-40px);
+          transform: rotate(45deg) translateY(-40px);
+  opacity: 0;
+}
+
+body main .btnUp:hover::after {
+  -webkit-transform: rotate(-45deg) translateY(-40px);
+          transform: rotate(-45deg) translateY(-40px);
+  opacity: 0;
+}
+
+body main .btnUp:hover span {
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+  opacity: 0;
+}
+
+body main .btnUp:hover p {
+  top: 50%;
+  opacity: 1;
+}
+
+body main .btnDown {
+  display: block;
+  width: 61px;
+  height: 50px;
+  position: absolute;
+  left: -70px;
+  bottom: 20px;
+}
+
+body main .btnDown::before, body main .btnDown::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 20px;
+  background: #777;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  -webkit-transform-origin: right bottom;
+          transform-origin: right bottom;
+  -webkit-transition: 0.5s 0.2s;
+  transition: 0.5s 0.2s;
+}
+
+body main .btnDown::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+body main .btnDown::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+body main .btnDown span {
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: #777;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body main .btnDown p {
+  font: 12px/1 'orbitron';
+  color: #111;
+  text-align: center;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: 0.5s 0.4s;
+  transition: 0.5s 0.4s;
+}
+
+body main .btnDown:hover::before {
+  -webkit-transform: rotate(-45deg) translateY(40px);
+          transform: rotate(-45deg) translateY(40px);
+  opacity: 0;
+}
+
+body main .btnDown:hover::after {
+  -webkit-transform: rotate(45deg) translateY(40px);
+          transform: rotate(45deg) translateY(40px);
+  opacity: 0;
+}
+
+body main .btnDown:hover span {
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  opacity: 0;
+}
+
+body main .btnDown:hover p {
+  top: 50%;
+  opacity: 1;
+}
+
+body main .panel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+body main .panel li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  -webkit-perspective: 400px;
+          perspective: 400px;
+}
+
+body main .panel li .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body main .panel li .bg .pic {
+  width: 33vw;
+  position: absolute;
+  bottom: 5vh;
+  right: -5vw;
+}
+
+body main .panel li .bg .pic path {
+  stroke: #111;
+  stroke-width: 1;
+  fill: rgba(0, 0, 0, 0);
+  stroke-dasharray: 2400;
+  stroke-dashoffset: 2400;
+  -webkit-transition: stroke-dashoffset 2s 0.5s, fill 0.5s 1.5s;
+  transition: stroke-dashoffset 2s 0.5s, fill 0.5s 1.5s;
+}
+
+body main .panel li:nth-of-type(1) .bg {
+  background: #b5ebbe;
+}
+
+body main .panel li:nth-of-type(2) .bg {
+  background: rgba(237, 241, 200, 0.87);
+}
+
+body main .panel li:nth-of-type(3) .bg {
+  background: #bcf1ef;
+}
+
+body main .panel li:nth-of-type(4) .bg {
+  background: #f1c4c2;
+}
+
+body main .panel li.on .bg {
+  opacity: 1;
+  -webkit-transform: translateY(0%) rotateX(0deg);
+          transform: translateY(0%) rotateX(0deg);
+}
+
+body main .panel li.on .bg path {
+  fill: rgba(0, 0, 0, 0.5);
+  stroke-dashoffset: 0;
+}
+
+body main .panel li.up .bg {
+  opacity: 0;
+  -webkit-transform: translateY(-80%) rotateX(50deg);
+          transform: translateY(-80%) rotateX(50deg);
+}
+
+body main .panel li.down .bg {
+  opacity: 0;
+  -webkit-transform: translateY(80%) rotateX(-50deg);
+          transform: translateY(80%) rotateX(-50deg);
+}
+/*# sourceMappingURL=style.css.map */
